@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body {background: url(sky.jpeg);}
+		.photos {position: absolute; left: 0; top: 0;}
+		.pngs {position: absolute; left: 0; top: 0;}
+		#poetText{z-index: 9; position: absolute; font-size: 2rem; left:50px; top: 50px; font-family: Roboto; color: whitesmoke;}
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	</style>
+</head>
+<body>
+	<div id="poetText"></div>
+	<script type="text/javascript">
+
+
+	var a = ["1", "2", "3", "4", "5", "6", "7", "8"]
+		for(var i=0; i<3; i++){
+			var c = document.createElement("img");
+			c.src = a[randomBH(0,7)] + ".png";
+			c.className = "pngs";
+			c.style.width = randomBH(600,500) + "px";
+			c.style.height = "auto";
+			c.style.left = Math.random()*screen.availWidth + "px";
+			c.style.top = Math.random()*screen.availHeight + "px";
+			document.body.appendChild(c);
+			}
+
+			var a = ["wig1", "wig2", "wig3", "wig4", "wig5", "wig6", "wig7", "wig8","wig9", "wig10", "wig11", "wig12","wig13", "wig14", "wig15", "wig15", "wig16", "wig17", "wig18","wig19", "wig20"]
+		for(var i=0; i<20; i++){
+			var c = document.createElement("img");
+			c.src = a[randomBH(0,19)] + ".jpeg";
+			c.className = "photos";
+			c.style.width = randomBH(100,200) + "px";
+			c.style.height = "auto";
+			c.style.left = Math.random()*screen.availWidth + "px";
+			c.style.top = Math.random()*screen.availHeight + "px";
+			document.body.appendChild(c);
+			}
+
+
+	var a = ["1", "2", "3", "4", "5", "6", "7", "8"]
+		for(var i=0; i<3; i++){
+			var c = document.createElement("img");
+			c.src = a[randomBH(0,7)] + ".png";
+			c.className = "pngs";
+			c.style.width = randomBH(600,500) + "px";
+			c.style.height = "auto";
+			c.style.left = Math.random()*screen.availWidth + "px";
+			c.style.top = Math.random()*screen.availHeight + "px";
+			document.body.appendChild(c);
+			}
+
+
+
+			var poet = "KONOMAD <br> OFF  COLOUR <br>IT  IS  FUN <br> TO  CREATE <br> MULTIPLE  CHARACTERS <br>THAT  EXIST  <br>IN  OURSELVES";
+
+		var poetArr = poet.split(" ");
+		console.log(poetArr);
+
+		var myTimer = setInterval(print,550);
+		var s=0;
+		function print() {
+			poetText.innerHTML += poetArr[s] + " ";
+			s++;
+			if (s == poetArr.length) {
+				clearInterval(myTimer);
+			}
+		}
+
+
+
+			function randomBH(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+
+
+		</script>
+</html>
+ 
